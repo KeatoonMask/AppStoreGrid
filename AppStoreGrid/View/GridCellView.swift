@@ -6,15 +6,42 @@
 //
 
 import SwiftUI
+import KingfisherSwiftUI
 
 struct GridCellView: View {
+    var app: Application
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            KFImage(app.thumbnailURL)
+                .resizable()
+                .frame(width: 80, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .cornerRadius(10)
+
+            VStack(alignment: .leading) {
+                Text(app.name)
+                    .bold()
+
+                Text(app.subtitle)
+                    .font(.footnote)
+            }
+
+            Spacer()
+
+            Button(action: {}) {
+                Text("   GET   ")
+                    .font(.system(size: 16, weight: .bold, design: .default))
+                    .padding(4)
+                    .background(Color(red: 238 / 255, green: 238 / 255, blue: 240 / 255))
+                    .foregroundColor(.accentColor)
+                    .cornerRadius(10)
+            }
+        }
     }
 }
 
 struct GridCellView_Previews: PreviewProvider {
     static var previews: some View {
-        GridCellView()
+        GridCellView(app: app1)
     }
 }
