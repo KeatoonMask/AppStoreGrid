@@ -11,7 +11,7 @@ import SwiftUI
 struct AppStoreGridApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GridView()
         }
     }
 }

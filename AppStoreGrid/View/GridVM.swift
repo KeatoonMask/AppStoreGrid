@@ -27,7 +27,12 @@ class GridVM: ObservableObject {
         apps["Top Free Apps"] = mockApps
         apps["Popular Apps to Try"] = mockApps.shuffled()
         apps["Get Stuff Done"] = mockApps.shuffled()
-        apps["Pain and Gain"] = mockApps.shuffled()
         apps["Social Networking"] = mockApps.shuffled()
+        apps["Work Remotely"] = mockApps.shuffled()
+        apps["Lear a new language"] = mockApps.shuffled()
+        apps["Play an instrument"] = mockApps.shuffled()
+        apps["Books"] = mockApps.shuffled()
+        apps["Business"] = mockApps.shuffled()
+        apps["Education"] = mockApps.shuffled()
     }
 }

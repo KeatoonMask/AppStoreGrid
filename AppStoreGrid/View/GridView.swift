@@ -23,8 +23,9 @@ struct GridView: View {
                     Spacer()
                 }
 
+                // Main stack
                 ForEach(vm.allCategories, id: \.self) { category in
-                    VStack {
+                    LazyVStack {
                         Divider()
                             .padding([.leading, .trailing])
 
@@ -42,7 +43,7 @@ struct GridView: View {
                                     .frame(width: 5, height: 80)
                                 ForEach(vm.app(for: category)) { app in
                                     GridCellView(app: app)
-                                        .frame(width: 320, height: 100)
+                                        .frame(width: 325, height: 100)
                                         .padding(.horizontal, 5)
                                 }
                             }
@@ -57,6 +58,6 @@ struct GridView: View {
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
         GridView()
-            .previewDevice("iPhone 11 Pro")
+            .previewDevice("iPhone 11")
     }
 }

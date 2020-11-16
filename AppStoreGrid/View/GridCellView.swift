@@ -12,7 +12,8 @@ struct GridCellView: View {
     var app: Application
 
     var body: some View {
-        HStack {
+        print("Request App ---> " + app.id)
+        return HStack {
             KFImage(app.thumbnailURL)
                 .resizable()
                 .frame(width: 80, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
